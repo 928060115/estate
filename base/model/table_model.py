@@ -25,4 +25,4 @@ class City(base):
     city_province = Column(String,default='')
     city_name = Column(String,default='')
     href = Column(String,default='')
-    create_time = Column(DateTime)
+    data_source = Column(String,default='')

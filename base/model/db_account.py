@@ -25,8 +25,8 @@ class DbAccount():
         if self.__session:
             return self.__session
 
-        url = 'mysql+mysqlconnector://%s:%s@%s:%d/%s' % (self.name, self.password, self.host, self.port, self.db_name)
-        engine = create_engine(url)
+        url = 'mysql+mysqlconnector://%s:%s@%s:%d/%s?charset=utf8&auth_plugin=mysql_native_password' % (self.name, self.password, self.host, self.port, self.db_name)
+        engine = create_engine(url,echo=True,encoding='utf8')
         DBSession = sessionmaker(bind=engine)
 
         self.__session = DBSession()

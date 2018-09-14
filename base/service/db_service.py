@@ -11,7 +11,7 @@ from base.types.environment import Environment
 
 db_info = {
     Environment.DEV:DbAccount('127.0.0.1','root','123456'),
-    Environment.PRO:DbAccount('')
+    Environment.PRO:DbAccount('118.24.5.58')
 }
 
 def get_session(env=Environment.DEV):
